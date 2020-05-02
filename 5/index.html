@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de-de">
     <head>
-	<meta name="generator" content="Hugo 0.65.0" />
+	<meta name="generator" content="Hugo 0.69.2" />
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<meta name="description" content="My personal weblog. &lt;br/&gt;&lt;br/&gt; Ctrl&#43;B toggle sidebar. ">
@@ -73,6 +73,63 @@
 
 	<div class="catalogue">
 		
+			<a href="https://fritz.wtf/posts/hinweis/" class="catalogue-item">
+    <div>
+        <time datetime="2016-07-05 22:18:47 &#43;0200 CEST" class="catalogue-time">July 5, 2016</time>
+        <h1 class="catalogue-title">KNMDI - Computertechnik: Folien, Images, Screencasts</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            Alle Unterlagen und Testdaten finden sich hier.
+Bei Fragen: Fragen. -&gt; steffen AT fritz.wtf
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://fritz.wtf/posts/usbimg/" class="catalogue-item">
+    <div>
+        <time datetime="2016-06-29 22:18:47 &#43;0200 CEST" class="catalogue-time">June 29, 2016</time>
+        <h1 class="catalogue-title">KNMDI - Computertechnik: Test-Image Sitzung 27.6.2016</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+              Image des USB-Sticks: https://fritz.wtf/sitzung_1_usb.img.zip
+  Image erstellen unter Linux mit dd:
+dd if=/dev/sdb of=/sitzung_1_usb.img
+  Hashsumme erstellen mit sha1
+sha1 sitzung_1_usb.img &gt; hash.sha1
+  Image mounten
+file -s sitzung_1_usb.img
+parted sitzung_1_usb.img; unit; B; print
+sudo mount -o loop,ro,offset=1048576 sitzung_1_usb.img /mnt/image
+  
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://fritz.wtf/posts/hackermag/" class="catalogue-item">
+    <div>
+        <time datetime="2016-06-09 13:42:47 &#43;0200 CEST" class="catalogue-time">June 9, 2016</time>
+        <h1 class="catalogue-title">Hacker Magazines - An Overview</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            When you&rsquo;re interested in infosec, you are probably looking for some good hacking and infosec magazines. Here is an overview of zines I read on a regular basis.
+2600 - The Hacker Quarterly   Founded: 1984
+  Language: English
+  Latest: 2016-06
+  Level: beginner, advanced
+  Frequency: quarterly
+  Topics: implementation errors, url guessing, politics, activism
+  URL: http://2600.com
+  Price print: $27 p.
+        </p>
+    </div>
+</a>
+
+		
 			<a href="https://fritz.wtf/posts/siegfried_freebsd/" class="catalogue-item">
     <div>
         <time datetime="2016-06-01 21:04:41 &#43;0200 CEST" class="catalogue-time">June 1, 2016</time>
@@ -102,54 +159,6 @@ The port can be found on github, it is waiting to be added to the ports tree.
 </a>
 
 		
-			<a href="https://fritz.wtf/posts/digipress_mai_2016/" class="catalogue-item">
-    <div>
-        <time datetime="2016-05-28 22:05:20 &#43;0200 CEST" class="catalogue-time">May 28, 2016</time>
-        <h1 class="catalogue-title">DigiPress - Mai 2016</h1>
-        <div class="catalogue-line"></div>
-
-        <p>
-            News from the digital preservation community
-  Euan Cochrane wrote a nice tool for the identification of floppy disk formats from kryoflux stream files: github
-  ffmprovisr - Making FFmpeg Easier: github
-  Tracking versions with PAV: The PAV ontology specializes the W3C PROV-O standard to give a lightweight approach to recording details about a resource, giving its Provenance, Authorship and Versioning. https://practicalprovenance.wordpress.com
-  Migrating Files to Preservation Formats - Theory: http://archival-integration.
-        </p>
-    </div>
-</a>
-
-		
-			<a href="https://fritz.wtf/posts/praxisreport/" class="catalogue-item">
-    <div>
-        <time datetime="2016-05-19 22:18:47 &#43;0200 CEST" class="catalogue-time">May 19, 2016</time>
-        <h1 class="catalogue-title">Archivierbarkeit von Webobjekten</h1>
-        <div class="catalogue-line"></div>
-
-        <p>
-            My article Praxisreport: Verfahren zur Evaluierung der Archivierbarkeit von Webobjekten is free available:
-Praxisreport: Verfahren zur Evaluierung der Archivierbarkeit von Webobjekten
-        </p>
-    </div>
-</a>
-
-		
-			<a href="https://fritz.wtf/posts/dh_mai_2016/" class="catalogue-item">
-    <div>
-        <time datetime="2016-05-13 22:05:20 &#43;0200 CEST" class="catalogue-time">May 13, 2016</time>
-        <h1 class="catalogue-title">Irgendwas mit DH - Mai 2016</h1>
-        <div class="catalogue-line"></div>
-
-        <p>
-            LIBREAS – Call for Papers: Post-Digital Humanities aus bibliotheks- und informationswissenschaftlicher Sicht : https://libreas.wordpress.com
-  Neoliberal Tools (and Archives): A Political History of Digital Humanities : https://lareviewofbooks.org
-  Response to “Neoliberal Tools: A Political History of Digital Humanities” : http://alisonhedley.com
-  Tagungsbericht Digitale Daten in den Geisteswissenschaften. Interdisziplinäre Perspektiven für semantische und strukturelle Analysen : www.hsozkult.de
-  Interview Bildungsmaterialien bereitstellen und entwickeln über Github : www.
-        </p>
-    </div>
-</a>
-
-		
 	</div>
 
 	<div class="pagination">
@@ -167,7 +176,7 @@ Praxisreport: Verfahren zur Evaluierung der Archivierbarkeit von Webobjekten
 
         		<footer>
 			<span>
-			&copy; <time datetime="2020-02-22 12:00:16.317695135 &#43;0100 CET m=&#43;0.112343889">2020</time> steffen. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			&copy; <time datetime="2020-05-02 18:23:18.809990916 &#43;0200 CEST m=&#43;0.357908664">2020</time> steffen. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
 			</span>
 		</footer>
 

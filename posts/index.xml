@@ -6,10 +6,43 @@
     <description>Recent content in Posts on Steffen Fritz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
-    <lastBuildDate>Sat, 22 Feb 2020 10:40:47 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 13:12:42 +0200</lastBuildDate>
     
 	<atom:link href="https://fritz.wtf/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sao Tome - Cemetery Of Lost Images</title>
+      <link>https://fritz.wtf/posts/saotome/</link>
+      <pubDate>Sat, 02 May 2020 13:12:42 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/posts/saotome/</guid>
+      <description>Roaming around the web and Google maps in the Covid-19-lockdown I noticed there is a special place west of Sao Tome. There are a lot of pictures in the Gulf of Guniea, in the triangle of Sao Tome, St. Helena and Ascension. These pictures don&amp;rsquo;t belong there. I found no other place in Google maps where are images wrongly placed by geo tags in this quantity.
+Use street view on the following location link:</description>
+    </item>
+    
+    <item>
+      <title>Adventures with QNX - Part 1: Discovery</title>
+      <link>https://fritz.wtf/posts/hacking_qnx_1/</link>
+      <pubDate>Sun, 22 Mar 2020 22:40:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/posts/hacking_qnx_1/</guid>
+      <description>For the next few weeks I will take some notes on QNX on this blog, this is the first part of this series.
+Some of the findings may be publicly available in the docs. But, you know, this time I don&amp;rsquo;t RTFM :) Let&amp;rsquo;s go greyboxing.
+About QNX QNX is the leading proprietary real-time operating system (RTOS) for embedded devices. Founded in 1981 and acquired in 2010 by BlackBerry QNX can be found in many cars, industrial control systems and other time-critical infrastructure.</description>
+    </item>
+    
+    <item>
+      <title>Adventures with QNX - Part 1: Credentials</title>
+      <link>https://fritz.wtf/posts/hacking_qnx_2/</link>
+      <pubDate>Tue, 10 Mar 2020 22:40:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/posts/hacking_qnx_2/</guid>
+      <description>In the next few weeks I will take some notes on QNX on this blog, this is the second part of this series.
+Some of the findings may be publicly available in the docs. But, you know, this time I don&amp;rsquo;t RTFM :)
+User management passwd /etc/passwd /etc/shadow  Format via Link
+Credentials root:root</description>
+    </item>
     
     <item>
       <title>pacaudit - v.1.1.2</title>
