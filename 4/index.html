@@ -73,37 +73,6 @@
 
 	<div class="catalogue">
 		
-			<a href="https://fritz.wtf/posts/pacaudit_1/" class="catalogue-item">
-    <div>
-        <time datetime="2017-03-04 23:49:47 &#43;0200 &#43;0200" class="catalogue-time">March 4, 2017</time>
-        <h1 class="catalogue-title">pacaudit - v.0.3.0-DEV</h1>
-        <div class="catalogue-line"></div>
-
-        <p>
-            pacaudit v0.3.0 is ready and needs some testing. Btw, there are some changes.
-If pacaudit is executed without flags, it just prints the number of vulnerable packages installed.
-If executed with -v in verbose mode, it prints the names of the packages, the severities and all CVE.
-If executed with -n in Nagios mode, it just prints OK, WARNING or CRITICAL.
-A man page is added. Read it with groff -man -Tascii pacaudit.
-        </p>
-    </div>
-</a>
-
-		
-			<a href="https://fritz.wtf/posts/pacaudit/" class="catalogue-item">
-    <div>
-        <time datetime="2017-02-19 13:12:47 &#43;0200 &#43;0200" class="catalogue-time">February 19, 2017</time>
-        <h1 class="catalogue-title">pacaudit - a package audit for Arch Linux</h1>
-        <div class="catalogue-line"></div>
-
-        <p>
-            I wrote a little, but useful helper. pacaudit checks installed packages against known vulnerabilities listed on https://security.archlinux.org. You should run it after an update because we don&rsquo;t check for packages that are fixed. It would be no problem to check against all known vulnerabilities, just change the source URL in the code (see the github link), yet it makes no sense to me for a rolling release distribution.
-You can install it with
-        </p>
-    </div>
-</a>
-
-		
 			<a href="https://fritz.wtf/posts/siegfried_port/" class="catalogue-item">
     <div>
         <time datetime="2017-01-11 21:35:47 &#43;0200 &#43;0200" class="catalogue-time">January 11, 2017</time>
@@ -145,6 +114,42 @@ Download pdf
 </a>
 
 		
+			<a href="https://fritz.wtf/posts/hinweis/" class="catalogue-item">
+    <div>
+        <time datetime="2016-07-05 22:18:47 &#43;0200 CEST" class="catalogue-time">July 5, 2016</time>
+        <h1 class="catalogue-title">KNMDI - Computertechnik: Folien, Images, Screencasts</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            Alle Unterlagen und Testdaten finden sich hier.
+Bei Fragen: Fragen. -&gt; steffen AT fritz.wtf
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://fritz.wtf/posts/usbimg/" class="catalogue-item">
+    <div>
+        <time datetime="2016-06-29 22:18:47 &#43;0200 CEST" class="catalogue-time">June 29, 2016</time>
+        <h1 class="catalogue-title">KNMDI - Computertechnik: Test-Image Sitzung 27.6.2016</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+              Image des USB-Sticks: https://fritz.wtf/sitzung_1_usb.img.zip
+  Image erstellen unter Linux mit dd:
+dd if=/dev/sdb of=/sitzung_1_usb.img
+  Hashsumme erstellen mit sha1
+sha1 sitzung_1_usb.img &gt; hash.sha1
+  Image mounten
+file -s sitzung_1_usb.img
+parted sitzung_1_usb.img; unit; B; print
+sudo mount -o loop,ro,offset=1048576 sitzung_1_usb.img /mnt/image
+  
+        </p>
+    </div>
+</a>
+
+		
 	</div>
 
 	<div class="pagination">
@@ -162,7 +167,7 @@ Download pdf
 
         		<footer>
 			<span>
-			&copy; <time datetime="2020-05-02 18:23:18.808937494 &#43;0200 CEST m=&#43;0.356855230">2020</time> steffen. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			&copy; <time datetime="2020-05-02 19:42:08.504441539 &#43;0200 CEST m=&#43;0.097662619">2020</time> steffen. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
 			</span>
 		</footer>
 
