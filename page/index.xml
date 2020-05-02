@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Steffen Fritz</title>
+    <link>https://fritz.wtf/page/</link>
+    <description>Recent content in Pages on Steffen Fritz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Thu, 02 May 2019 22:35:06 +0100</lastBuildDate>
+    
+	<atom:link href="https://fritz.wtf/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>KNMDI CT</title>
+      <link>https://fritz.wtf/page/abk/</link>
+      <pubDate>Thu, 02 May 2019 22:35:06 +0100</pubDate>
+      
+      <guid>https://fritz.wtf/page/abk/</guid>
+      <description>Sommersemester 2019 Folien und Codebeispiele auf Anfrage
+Sommersemester 2016 Folien und Codebeispiele auf Anfrage
+Images Diskettenabbilder auf Anfrage
+Screencasts   Image mit dd erstellen
+  Image mit ddrescue erstellen
+  Offset feststellen
+  Image mounten
+  </description>
+    </item>
+    
+    <item>
+      <title>Publikationen und Vorträge</title>
+      <link>https://fritz.wtf/page/publikationen/</link>
+      <pubDate>Wed, 17 Oct 2018 09:09:30 +0100</pubDate>
+      
+      <guid>https://fritz.wtf/page/publikationen/</guid>
+      <description>Publikationen   Booze, Nosiness and City Terminals. In: 2600 - The Hacker Quarterly, Band 28 Heft 2. New York, 2011.
+  Diplomarbeit: Computerunterstützte Autorenerkennung im Bereich der forensischen Linguistik durch Stilometrie. Stuttgart, 2013.
+  Die Anwendung des BagIt-Formats im Deutschen Literaturarchiv Marbach In: b.i.t. online, Band 17 Heft 2. Wiesbaden, 2014.
+  Verfahren zur Evaluierung der Archivierbarkeit von Webobjekten. In: ABI Technik, Band 35 Heft 2. Berlin, 2015.</description>
+    </item>
+    
+    <item>
+      <title>Impressum</title>
+      <link>https://fritz.wtf/page/impressum/</link>
+      <pubDate>Wed, 17 Oct 2018 08:52:06 +0100</pubDate>
+      
+      <guid>https://fritz.wtf/page/impressum/</guid>
+      <description>Snailmail Steffen Fritz
+Hauffstraße 4
+71696 Möglingen
+eMail steffen [AT] fritz.wtf
+GnuPG Download PublicKey
+XMPP EOL (Eingestellt 11/2019)
+Datenschutz Erklärung zum Datenschutz für fritz.wtf und amp-off.com
+Von allen Besuchern werden gespeichert und auf unbestimmte Zeit aufbewahrt:
+Datum/Uhrzeit, abgerufene Seiten, Statuscodes des Webservers, Browser/Betriebssystem, der Referer.  Die IP-Adresse, von der aus die Seite abgerufen wurde, wird nicht gespeichert. Somit läßt sich an Hand der Logdaten kaum ein Zusammenhang zu einzelnen Besuchern herstellen.</description>
+    </item>
+    
+  </channel>
+</rss>

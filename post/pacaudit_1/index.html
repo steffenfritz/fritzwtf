@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de-de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="pacaudit - v.0.3.0-DEV &middot; Steffen Fritz ">
+        <meta property="og:site_name" content="Steffen Fritz"/>
+        <meta property="og:description" content="">
+        <meta property="og:url" content="https://fritz.wtf/post/pacaudit_1/" />
+        <meta property="og:locale" content="de-de">
+        <meta name="author" content="steffen">
+        <meta name="description" content="">
+        <meta name="keywords" content="arch, linux, security">
+        <meta name="generator" content="Hugo 0.59.1" />
+        <link rel="icon" href="https://fritz.wtf/assets/favicon.ico" type="image/x-icon"> 
+        <link rel="stylesheet" href="https://fritz.wtf/css/slender-base.css">
+        <link rel="stylesheet" href="https://fritz.wtf/css/slender-color-schemes.css">
+        <link rel="stylesheet" href="https://fritz.wtf/css/font-awesome-4.5.0.min.css">
+        <link rel="stylesheet" href="https://fritz.wtf/css/highlight-9.0.0-default.min.css">
+        <title>
+            
+                pacaudit - v.0.3.0-DEV &middot; Steffen Fritz
+            
+        </title>
+    </head>
+    <body class="color-scheme-white">
+        <div class="container">
+            <header>
+                <nav>
+                    <ul><li><a href="https://fritz.wtf/page/impressum">Impressum</a></li><li><a href="https://fritz.wtf/page/abk">KNMDI</a></li><li><a href="https://fritz.wtf/page/publikationen">Publikationen</a></li><li><a href="https://fritz.wtf/">Home</a></li></ul>
+                </nav>
+                
+                    <h1 class="title">pacaudit - v.0.3.0-DEV</h1>
+                    <aside>
+                        <p>on <strong>Sat, Mar 04, 2017</strong></p>
+                    </aside>
+                
+            </header>
+<article class="article-content">
+    <p>pacaudit v0.3.0 is ready and needs some testing. Btw, there are some changes.</p>
+
+<p>If pacaudit is executed without flags, it just prints the number of vulnerable packages installed.</p>
+
+<p>If executed with -v in verbose mode, it prints the names of the packages, the severities and all CVE.</p>
+
+<p>If executed with -n in Nagios mode, it just prints OK, WARNING or CRITICAL.</p>
+
+<p>A man page is added. Read it with <code>groff -man -Tascii pacaudit.1</code> or copy it to /usr/share/man/man1</p>
+
+<p>Get 0.3.0-DEV from github and compile it with</p>
+
+<p><code>go build -o pacaudit -ldflags &quot;-s -w&quot;</code></p>
+
+<p>Comments on AUR, github or via email are highly appreciated!</p>
+
+<p><a href="https://github.com/steffenfritz/pacaudit/releases/tag/v0.3.0">Github</a></p>
+
+</article>
+        </div>
+        <footer>
+            <p>Copyright 2016 - 2019 &copy; Steffen Fritz</p>
+        </footer>
+        <script src="https://fritz.wtf/js/highlight-9.0.0.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        
+    </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de-de">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Adventures with QNX - Part 1: Discovery &middot; Steffen Fritz</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Steffen Fritz" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">Steffen Fritz</h2>
+				</a>
+				<ul>
+    
+    
+        <li>
+            <a href="/page/impressum">
+                
+                <span>Impressum</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/page/abk">
+                
+                <span>KNMDI</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/page/publikationen">
+                
+                <span>Publikationen</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/">
+                
+                <span>Home</span>
+                
+            </a>
+        </li>
+    
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        steffen
+        <br>
+        <span>on&nbsp;</span><time datetime="2019-11-10 22:40:47 &#43;0200 &#43;0200">November 10, 2019</time>
+</div>
+		<h1 class="post-title">Adventures with QNX - Part 1: Discovery</h1>
+<div class="post-line"></div>
+
+		
+
+		<p>For the next few weeks I will take some notes on QNX on this blog, this is the first part of this series.</p>
+<p>Some of the findings may be publicly available in the docs. But, you know, this time I don&rsquo;t RTFM :) Let&rsquo;s go greyboxing.</p>
+<h1 id="about-qnx">About QNX</h1>
+<p>QNX is the leading proprietary real-time operating system (RTOS) for embedded devices. Founded in 1981 and acquired in 2010 by BlackBerry QNX can be found in many cars, industrial control systems and other time-critical infrastructure.</p>
+<p>QNX is POSIX compliant and supports all POSIX APIs. Commands like ls or cat are available.</p>
+<p>The kernel contains only CPU scheduling, IPC, interrupt redirection and timers. Everything else runs in user land.</p>
+<p>I am using the VMWare image provided by BlackBerry via its SoftwareCenter for my journey, so the RT in RTOS cannot
+be guaranteed.</p>
+<h1 id="discovery">Discovery</h1>
+<p>For remote service discovery and some fingerprinting I use common tools and techniques.</p>
+<h2 id="nmap">nmap</h2>
+<pre><code>$ nmap -sS -A 192.168.1.60
+
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-10 23:23 CET
+Nmap scan report for 192.168.1.60
+Host is up (0.038s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     (protocol 2.0)
+| fingerprint-strings:
+|   NULL:
+|_    SSH-2.0-OpenSSH_7.4 QNX_Secure_Shell-20161225
+| ssh-hostkey:
+|   2048 76:49:7f:7c:66:9c:62:f3:8e:4b:2b:8b:3a:81:11:f8 (RSA)
+|   256 ad:3f:27:60:04:54:14:12:17:8d:58:3e:c9:2e:e1:1e (ECDSA)
+|_  256 f0:8f:a7:96:57:d0:8a:c6:cb:a4:d5:31:74:0e:a5:f3 (ED25519)
+8000/tcp open  qconn   qconn remote IDE support
+1 service unrecognized despite returning data. If you know the service/version, &lt;SNIP&gt; 
+SF-Port22-TCP:V=7.80%I=7%D=11/10%Time=5DC88DF9%P=x86_64-unknown-linux-gnu%
+SF:r(NULL,2E,&quot;SSH-2\.0-OpenSSH_7\.4\x20QNX_Secure_Shell-20161225\n&quot;);
+MAC Address: F0:18:98:89:85:BD (Apple)
+Device type: specialized
+Running: QNX RTOS 7.X
+OS CPE: cpe:/o:qnx:rtos:7.0.0
+OS details: QNX RTOS 7.0.0
+Network Distance: 1 hop
+Service Info: OS: QNX; CPE: cpe:/o:qnx:qnx
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   37.64 ms 192.168.1.60
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 23.40 seconds
+</code></pre>
+<h2 id="netstat">netstat</h2>
+<p>netstat shows these services. sshd is using IPv4/IPv6:</p>
+<pre><code>$ netstat -na
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        State
+tcp        0     44  192.168.1.60.22        192.168.1.50.48504     ESTABLISHED
+tcp        0      0  *.8000                 *.*                    LISTEN
+tcp        0      0  *.22                   *.*                    LISTEN
+udp        0      0  *.*                    *.*
+udp        0      0  *.68                   *.*
+Active Internet6 connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp6       0      0  *.22                   *.*                    LISTEN
+Active UNIX domain sockets
+Address  Type   Recv-Q Send-Q    Inode     Conn     Refs  Nextref Addr
+82471a8 stream      0      0        0  82472c8        0        0
+82472c8 stream      0      0        0  82471a8        0        0
+</code></pre>
+<h1 id="basic-services">Basic Services</h1>
+<h2 id="ssh">ssh</h2>
+<h2 id="sftp-subsystem">sftp subsystem</h2>
+<h2 id="qconn">qconn</h2>
+<p>Without authentication one can connect to qconn using a tool like netcat:</p>
+<pre><code>$ nc -v 192.168.1.60 8000
+$ &lt;qconn-broker&gt;
+$ &lt;qconn-broker&gt; info
+$ &lt;qconn-broker&gt; ENDIAN=le HASVERSION=1 QCONN_VERSION=1.4.207944 OS=nto RELEASE=7.0.0 VERSION=2017/02/14-16:01:20EST MACHINE=x86pc ARCHITECTURE=x86_64 CPU=x86_64 HOSTNAME=localhost SYSNAME=QNX NUM_SRVCS=1
+$ &lt;qconn-broker&gt;
+$ &lt;qconn-broker&gt; service launcher
+$ &lt;qconn-broker&gt; &lt;qconn-launcher&gt; chdir /
+  OK
+&lt;qconn-launcher&gt; start/flags 8000 ls ls
+  OK 385035
+&lt;qconn-launcher&gt; continue
+  OK
+  bin     dev     etc     home    lib     proc    root    sbin    tmp     usr     var
+Connection closed by foreign host.
+</code></pre>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/posts/pacaudit_4/" class="left arrow">&#8592;</a>
+		<a href="/posts/hacking_qnx_2/" class="right arrow">&#8594;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2020-02-22 11:54:50.560074628 &#43;0100 CET m=&#43;0.304489494">2020</time> steffen. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

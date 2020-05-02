@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Steffen Fritz</title>
+    <link>https://fritz.wtf/post/</link>
+    <description>Recent content in Posts on Steffen Fritz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Sun, 03 Nov 2019 22:40:47 +0200</lastBuildDate>
+    
+	<atom:link href="https://fritz.wtf/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pacaudit - v.1.1.0</title>
+      <link>https://fritz.wtf/post/pacaudit_4/</link>
+      <pubDate>Sun, 03 Nov 2019 22:40:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/pacaudit_4/</guid>
+      <description>pacaudit v1.1.0 is ready, install it via trizen or any other AUR pkg manager and read the man page.
+trizen -S pacaudit man pacaudit  There is the idea that pacaudit could be a pacman hook to warn the user when she tries to install a vulnerable package. If you&amp;rsquo;d like to help with this task, checkout the issue page on github.
+Comments on AUR, github or via email are highly appreciated!</description>
+    </item>
+    
+    <item>
+      <title>gobagit - A tool to work with the BagIt format </title>
+      <link>https://fritz.wtf/post/gobagit/</link>
+      <pubDate>Sat, 06 Jul 2019 11:07:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/gobagit/</guid>
+      <description>gobagit is a command line tool and golang library to work with the BagIt format I am writing currently.
+I really like the bagit format because it is simple, a standard (RFC 8493) and widely used. gobagit is available in version 0.2.0 and under heavy development, check the dev branch.
+I&amp;rsquo;d like to get some feedback, so drop me an issue or star on github.
+https://github.com/steffenfritz/bagit  You don&amp;rsquo;t have to build the tool yourself, just download a pre-built from the release page</description>
+    </item>
+    
+    <item>
+      <title>pacaudit - v.1.0.1</title>
+      <link>https://fritz.wtf/post/pacaudit_3/</link>
+      <pubDate>Thu, 02 May 2019 22:40:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/pacaudit_3/</guid>
+      <description>pacaudit v1.0.1 is ready, install it via trizen and read the man page.
+trizen -S pacaudit  Comments on AUR, github or via email are highly appreciated!
+Github</description>
+    </item>
+    
+    <item>
+      <title>mxcheck - a smtpd checker</title>
+      <link>https://fritz.wtf/post/mxcheck/</link>
+      <pubDate>Wed, 17 Oct 2018 11:07:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/mxcheck/</guid>
+      <description>I needed a tool to check mail servers for open relaying and proper dns settings. There are several web sites providing such services, but I like my tools locally if possible.
+As I couldn&amp;rsquo;t find such a tool, I wrote one. You can find it on Github:
+https://github.com/steffenfritz/mxcheck  With golang installed you can go get it with
+go get github.com/steffenfritz/mxcheck  Usage is simple:
+./mxcheck -t TARGETHOST  </description>
+    </item>
+    
+    <item>
+      <title>roy is in the AUR - create custom signature files for siegfried</title>
+      <link>https://fritz.wtf/post/roy_aur/</link>
+      <pubDate>Fri, 14 Jul 2017 21:35:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/roy_aur/</guid>
+      <description>I wrote a PKGBUILD file for roy. With this handy tool you can create custom signature files for siegfried, the &amp;ldquo;signature-based file format identification tool.
+Install it on Arch Linux with
+yaourt -S roy
+roy and siegfried are developed by Richard Lehane. For more info check http://www.itforarchivists.com/siegfried</description>
+    </item>
+    
+    <item>
+      <title>siegfried - a signature-based file format identification tool</title>
+      <link>https://fritz.wtf/post/siegfried_aur/</link>
+      <pubDate>Sat, 22 Apr 2017 13:12:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/siegfried_aur/</guid>
+      <description>I wrote a PKGBUILD file for siegfried, the &amp;ldquo;signature-based file format identification tool, implementing the National Archives UK&amp;rsquo;s PRONOM file format signatures and freedesktop.org&amp;rsquo;s MIME-info file format signatures
+Install it on Arch Linux with
+yaourt -S siegfried
+The package is called siegfried, the binary sf. After the installation run sf -update to fetch a recent version of the signature database.
+Siegfried is developed by Richard Lehane. For more info check http://www.</description>
+    </item>
+    
+    <item>
+      <title>pacaudit - v.0.3.1</title>
+      <link>https://fritz.wtf/post/pacaudit_2/</link>
+      <pubDate>Sun, 05 Mar 2017 23:49:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/pacaudit_2/</guid>
+      <description>pacaudit v0.3.1 is ready, install it via yaourt.
+Comments on AUR, github or via email are highly appreciated!
+Github</description>
+    </item>
+    
+    <item>
+      <title>pacaudit - v.0.3.0-DEV</title>
+      <link>https://fritz.wtf/post/pacaudit_1/</link>
+      <pubDate>Sat, 04 Mar 2017 23:49:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/pacaudit_1/</guid>
+      <description>pacaudit v0.3.0 is ready and needs some testing. Btw, there are some changes.
+If pacaudit is executed without flags, it just prints the number of vulnerable packages installed.
+If executed with -v in verbose mode, it prints the names of the packages, the severities and all CVE.
+If executed with -n in Nagios mode, it just prints OK, WARNING or CRITICAL.
+A man page is added. Read it with groff -man -Tascii pacaudit.</description>
+    </item>
+    
+    <item>
+      <title>pacaudit - a package audit for Arch Linux</title>
+      <link>https://fritz.wtf/post/pacaudit/</link>
+      <pubDate>Sun, 19 Feb 2017 13:12:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/pacaudit/</guid>
+      <description>I wrote a little, but useful helper. pacaudit checks installed packages against known vulnerabilities listed on https://security.archlinux.org. You should run it after an update because we don&amp;rsquo;t check for packages that are fixed. It would be no problem to check against all known vulnerabilities, just change the source URL in the code (see the github link), yet it makes no sense to me for a rolling release distribution.
+You can install it with</description>
+    </item>
+    
+    <item>
+      <title>Siegfried ported to FreeBSD</title>
+      <link>https://fritz.wtf/post/siegfried_port/</link>
+      <pubDate>Wed, 11 Jan 2017 21:35:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/siegfried_port/</guid>
+      <description>Siegfried is in the FreeBSD ports.
+Freshports</description>
+    </item>
+    
+    <item>
+      <title>Rewriting History - with warc files and internet archives</title>
+      <link>https://fritz.wtf/post/rewrhist/</link>
+      <pubDate>Tue, 13 Dec 2016 22:18:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/rewrhist/</guid>
+      <description>Not a paper, but a short article. First published in 2600 - The Hacker Quarterly.
+Download pdf</description>
+    </item>
+    
+    <item>
+      <title>XI HOPE!</title>
+      <link>https://fritz.wtf/post/hopeconf/</link>
+      <pubDate>Thu, 21 Jul 2016 22:18:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/hopeconf/</guid>
+      <description>All talks will be streamed at https://www.hope.net</description>
+    </item>
+    
+    <item>
+      <title>KNMDI - Computertechnik: Folien, Images, Screencasts</title>
+      <link>https://fritz.wtf/post/hinweis/</link>
+      <pubDate>Tue, 05 Jul 2016 22:18:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/hinweis/</guid>
+      <description>Alle Unterlagen und Testdaten finden sich hier.
+Bei Fragen: Fragen. -&amp;gt; steffen AT fritz.wtf</description>
+    </item>
+    
+    <item>
+      <title>KNMDI - Computertechnik: Test-Image Sitzung 27.6.2016</title>
+      <link>https://fritz.wtf/post/usbimg/</link>
+      <pubDate>Wed, 29 Jun 2016 22:18:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/usbimg/</guid>
+      <description> Image des USB-Sticks: https://fritz.wtf/sitzung_1_usb.img.zip
+ Image erstellen unter Linux mit dd:
+dd if=/dev/sdb of=/sitzung_1_usb.img
+ Hashsumme erstellen mit sha1
+sha1 sitzung_1_usb.img &amp;gt; hash.sha1
+ Image mounten
+file -s sitzung_1_usb.img
+parted sitzung_1_usb.img; unit; B; print
+sudo mount -o loop,ro,offset=1048576 sitzung_1_usb.img /mnt/image
+  </description>
+    </item>
+    
+    <item>
+      <title>Hacker Magazines - An Overview</title>
+      <link>https://fritz.wtf/post/hackermag/</link>
+      <pubDate>Thu, 09 Jun 2016 13:42:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/hackermag/</guid>
+      <description>When you&amp;rsquo;re interested in infosec, you are probably looking for some good hacking and infosec magazines. Here is an overview of zines I read on a regular basis.
+2600 - The Hacker Quarterly  Founded: 1984
+ Language: English
+ Latest: 2016-06
+ Level: beginner, advanced
+ Frequency: quarterly
+ Topics: implementation errors, url guessing, politics, activism
+ URL: http://2600.com
+ Price print: $27 p.a. USA and Canada / $38 p.</description>
+    </item>
+    
+    <item>
+      <title>Siegfried on FreeBSD</title>
+      <link>https://fritz.wtf/post/siegfried_freebsd/</link>
+      <pubDate>Wed, 01 Jun 2016 21:04:41 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/siegfried_freebsd/</guid>
+      <description>Last weekend I ported siegfried to FreeBSD. Siegfried is an advanced file identification tool, using the National Archives UK&amp;rsquo;s PRONOM and freedesktop&amp;rsquo;s MIME-info file format signatures. It&amp;rsquo;s written in Go and compared to other file id tools pretty fast.
+The port can be found on github, it is waiting to be added to the ports tree.</description>
+    </item>
+    
+    <item>
+      <title>Irgendwas mit DH - Mai 2016 - II</title>
+      <link>https://fritz.wtf/post/dh_mai_2016_1/</link>
+      <pubDate>Sun, 29 May 2016 22:05:20 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/dh_mai_2016_1/</guid>
+      <description>DH Box – Digital Humanities Virtual Workbench : &amp;ldquo;Setting up an environment for digital humanities computational work can be time-consuming and difficult. DH Box addresses this problem by streamlining installation processes and providing a digital humanities laboratory in the cloud through simple sign-in via a web browser&amp;rdquo; : http://dhbox.org/
+ A blog post on dhbox.org by Tony Hirst : ouseful.info
+ KB Research : Dataset KBK-1M containing 1.6 Million Newspaper Images available for researchers : kbreserach.</description>
+    </item>
+    
+    <item>
+      <title>DigiPress - Mai 2016</title>
+      <link>https://fritz.wtf/post/digipress_mai_2016/</link>
+      <pubDate>Sat, 28 May 2016 22:05:20 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/digipress_mai_2016/</guid>
+      <description>News from the digital preservation community
+ Euan Cochrane wrote a nice tool for the identification of floppy disk formats from kryoflux stream files: github
+ ffmprovisr - Making FFmpeg Easier: github
+ Tracking versions with PAV: The PAV ontology specializes the W3C PROV-O standard to give a lightweight approach to recording details about a resource, giving its Provenance, Authorship and Versioning. https://practicalprovenance.wordpress.com
+ Migrating Files to Preservation Formats - Theory: http://archival-integration.</description>
+    </item>
+    
+    <item>
+      <title>Archivierbarkeit von Webobjekten</title>
+      <link>https://fritz.wtf/post/praxisreport/</link>
+      <pubDate>Thu, 19 May 2016 22:18:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/praxisreport/</guid>
+      <description>My article Praxisreport: Verfahren zur Evaluierung der Archivierbarkeit von Webobjekten is free available:
+Praxisreport: Verfahren zur Evaluierung der Archivierbarkeit von Webobjekten</description>
+    </item>
+    
+    <item>
+      <title>Irgendwas mit DH - Mai 2016</title>
+      <link>https://fritz.wtf/post/dh_mai_2016/</link>
+      <pubDate>Fri, 13 May 2016 22:05:20 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/dh_mai_2016/</guid>
+      <description> LIBREAS – Call for Papers: Post-Digital Humanities aus bibliotheks- und informationswissenschaftlicher Sicht : https://libreas.wordpress.com
+ Neoliberal Tools (and Archives): A Political History of Digital Humanities : https://lareviewofbooks.org
+ Response to “Neoliberal Tools: A Political History of Digital Humanities” : http://alisonhedley.com
+ Tagungsbericht Digitale Daten in den Geisteswissenschaften. Interdisziplinäre Perspektiven für semantische und strukturelle Analysen : www.hsozkult.de
+ Interview Bildungsmaterialien bereitstellen und entwickeln über Github : www.dotcomblog.de
+  </description>
+    </item>
+    
+    <item>
+      <title>Conference: DigiBiz</title>
+      <link>https://fritz.wtf/post/digibiz/</link>
+      <pubDate>Mon, 09 May 2016 09:55:34 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/digibiz/</guid>
+      <description>How will business histories be written from digital records?
+&amp;ldquo;The National Records of Scotland, in collaboration with the University of Glasgow’s Centre for Business History in Scotland (CBHS), is hosting a one day conference on the theme of using digital records for business history research. The conference will be held in Edinburgh on Monday 9th May 2016, and is an exciting opportunity for archivists, historians and technical experts with an interest in business records to meet and discuss the challenges and opportunities presented by the shift of records from the physical to the digital.</description>
+    </item>
+    
+    <item>
+      <title>DigiPress - April 2016</title>
+      <link>https://fritz.wtf/post/digipres_april_2016/</link>
+      <pubDate>Sat, 30 Apr 2016 13:12:12 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/digipres_april_2016/</guid>
+      <description>News from the digital preservation community
+ W3C - Packaging on the Web: This document describes an approach for creating packages of files for use on the web. The approach is to package them using a new application/package media type
+ The Archive.org v1 API specification: on Github
+ warcprox - WARC writing MITM HTTP/S proxy: Fork on Github
+ Do Multiple Listeners to the Public Twitter Sample Stream Receive the Same Tweets?</description>
+    </item>
+    
+    <item>
+      <title>Open365 - an open source Office365 alternative</title>
+      <link>https://fritz.wtf/post/open365/</link>
+      <pubDate>Sat, 30 Apr 2016 13:12:12 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/open365/</guid>
+      <description>eyeOS, bought by Telefonica in 2014, is developing an open source alternative to Office365. It is called Open365 - not that creative. Nevertheless, it looks good, it feels good and there are sync clients for Linux, OS X and Windows. Open365 provides LibreOffice Writer, Impress and Calc, a calendar and an address book.
+In the next few weeks eyeOS will provide a download and therefore the possibility to have Open365 on premises.</description>
+    </item>
+    
+    <item>
+      <title>goml - a machine learning library for Go</title>
+      <link>https://fritz.wtf/post/goml/</link>
+      <pubDate>Wed, 27 Apr 2016 13:12:12 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/goml/</guid>
+      <description>When learning a new programming language, you need a project. Here is mine for learning Go. It&amp;rsquo;s is called goml and one day it will be a machine learning library. Pull requests and comments are highly welcome!</description>
+    </item>
+    
+    <item>
+      <title>Iceland 2016</title>
+      <link>https://fritz.wtf/post/iceland/</link>
+      <pubDate>Mon, 25 Apr 2016 13:12:26 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/post/iceland/</guid>
+      <description>In april I visited Iceland and took some pictures. You can find them here.</description>
+    </item>
+    
+  </channel>
+</rss>

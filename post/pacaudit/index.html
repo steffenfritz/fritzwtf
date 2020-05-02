@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de-de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="pacaudit - a package audit for Arch Linux &middot; Steffen Fritz ">
+        <meta property="og:site_name" content="Steffen Fritz"/>
+        <meta property="og:description" content="">
+        <meta property="og:url" content="https://fritz.wtf/post/pacaudit/" />
+        <meta property="og:locale" content="de-de">
+        <meta name="author" content="steffen">
+        <meta name="description" content="">
+        <meta name="keywords" content="arch, linux, security">
+        <meta name="generator" content="Hugo 0.59.1" />
+        <link rel="icon" href="https://fritz.wtf/assets/favicon.ico" type="image/x-icon"> 
+        <link rel="stylesheet" href="https://fritz.wtf/css/slender-base.css">
+        <link rel="stylesheet" href="https://fritz.wtf/css/slender-color-schemes.css">
+        <link rel="stylesheet" href="https://fritz.wtf/css/font-awesome-4.5.0.min.css">
+        <link rel="stylesheet" href="https://fritz.wtf/css/highlight-9.0.0-default.min.css">
+        <title>
+            
+                pacaudit - a package audit for Arch Linux &middot; Steffen Fritz
+            
+        </title>
+    </head>
+    <body class="color-scheme-white">
+        <div class="container">
+            <header>
+                <nav>
+                    <ul><li><a href="https://fritz.wtf/page/impressum">Impressum</a></li><li><a href="https://fritz.wtf/page/abk">KNMDI</a></li><li><a href="https://fritz.wtf/page/publikationen">Publikationen</a></li><li><a href="https://fritz.wtf/">Home</a></li></ul>
+                </nav>
+                
+                    <h1 class="title">pacaudit - a package audit for Arch Linux</h1>
+                    <aside>
+                        <p>on <strong>Sun, Feb 19, 2017</strong></p>
+                    </aside>
+                
+            </header>
+<article class="article-content">
+    <p>I wrote a little, but useful helper. pacaudit checks installed packages against known vulnerabilities listed on <a href="https://security.archlinux.org">https://security.archlinux.org</a>. You should run it after an update because we don&rsquo;t check for packages that are fixed. It would be no problem to check against all known vulnerabilities, just change the source URL in the code (see the github link), yet it makes no sense to me for a rolling release distribution.</p>
+
+<p>You can install it with</p>
+
+<p><code>yaourt -S pacaudit</code></p>
+
+<p>You have to import my gpg key before:</p>
+
+<p><code>gpg --recv-keys 7328F6E376924E4EE266381D3D9C808E038A615C</code></p>
+
+<p>or get it from github and compile it with</p>
+
+<p><code>go build -o pacaudit -ldflags &quot;-s -w&quot;</code></p>
+
+<p>Comments on AUR, github or via email are highly appreciated!</p>
+
+<p><a href="https://aur.archlinux.org/packages/pacaudit/">AUR</a></p>
+
+<p><a href="https://github.com/steffenfritz/pacaudit">Github</a></p>
+
+</article>
+        </div>
+        <footer>
+            <p>Copyright 2016 - 2019 &copy; Steffen Fritz</p>
+        </footer>
+        <script src="https://fritz.wtf/js/highlight-9.0.0.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        
+    </body>
+</html>

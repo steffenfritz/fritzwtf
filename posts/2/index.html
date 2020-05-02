@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de-de">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Posts &middot; Steffen Fritz</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="Steffen Fritz" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">Steffen Fritz</h2>
+				</a>
+				<ul>
+    
+    
+        <li>
+            <a href="/page/impressum">
+                
+                <span>Impressum</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/page/abk">
+                
+                <span>KNMDI</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/page/publikationen">
+                
+                <span>Publikationen</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/">
+                
+                <span>Home</span>
+                
+            </a>
+        </li>
+    
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="catalogue">
+		
+			<a href="https://fritz.wtf/posts/mxcheck/" class="catalogue-item">
+    <div>
+        <time datetime="2018-10-17 11:07:47 &#43;0200 CEST" class="catalogue-time">October 17, 2018</time>
+        <h1 class="catalogue-title">mxcheck - a smtpd checker</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            I needed a tool to check mail servers for open relaying and proper dns settings. There are several web sites providing such services, but I like my tools locally if possible.
+As I couldn&rsquo;t find such a tool, I wrote one. You can find it on Github:
+https://github.com/steffenfritz/mxcheck  With golang installed you can go get it with
+go get github.com/steffenfritz/mxcheck  Usage is simple:
+./mxcheck -t TARGETHOST  
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://fritz.wtf/posts/roy_aur/" class="catalogue-item">
+    <div>
+        <time datetime="2017-07-14 21:35:47 &#43;0200 CEST" class="catalogue-time">July 14, 2017</time>
+        <h1 class="catalogue-title">roy is in the AUR - create custom signature files for siegfried</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            I wrote a PKGBUILD file for roy. With this handy tool you can create custom signature files for siegfried, the &ldquo;signature-based file format identification tool.
+Install it on Arch Linux with
+yaourt -S roy
+roy and siegfried are developed by Richard Lehane. For more info check http://www.itforarchivists.com/siegfried
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://fritz.wtf/posts/siegfried_aur/" class="catalogue-item">
+    <div>
+        <time datetime="2017-04-22 13:12:47 &#43;0200 CEST" class="catalogue-time">April 22, 2017</time>
+        <h1 class="catalogue-title">siegfried - a signature-based file format identification tool</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            I wrote a PKGBUILD file for siegfried, the &ldquo;signature-based file format identification tool, implementing the National Archives UK&rsquo;s PRONOM file format signatures and freedesktop.org&rsquo;s MIME-info file format signatures
+Install it on Arch Linux with
+yaourt -S siegfried
+The package is called siegfried, the binary sf. After the installation run sf -update to fetch a recent version of the signature database.
+Siegfried is developed by Richard Lehane. For more info check http://www.
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://fritz.wtf/posts/pacaudit_2/" class="catalogue-item">
+    <div>
+        <time datetime="2017-03-05 23:49:47 &#43;0200 &#43;0200" class="catalogue-time">March 5, 2017</time>
+        <h1 class="catalogue-title">pacaudit - v.0.3.1</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            pacaudit v0.3.1 is ready, install it via yaourt.
+Comments on AUR, github or via email are highly appreciated!
+Github
+        </p>
+    </div>
+</a>
+
+		
+			<a href="https://fritz.wtf/posts/pacaudit_1/" class="catalogue-item">
+    <div>
+        <time datetime="2017-03-04 23:49:47 &#43;0200 &#43;0200" class="catalogue-time">March 4, 2017</time>
+        <h1 class="catalogue-title">pacaudit - v.0.3.0-DEV</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            pacaudit v0.3.0 is ready and needs some testing. Btw, there are some changes.
+If pacaudit is executed without flags, it just prints the number of vulnerable packages installed.
+If executed with -v in verbose mode, it prints the names of the packages, the severities and all CVE.
+If executed with -n in Nagios mode, it just prints OK, WARNING or CRITICAL.
+A man page is added. Read it with groff -man -Tascii pacaudit.
+        </p>
+    </div>
+</a>
+
+		
+	</div>
+	
+	<div class="pagination">
+		
+			<a href="/posts/" class="left arrow">&#8592;</a>
+		
+		
+			<a href="/posts/3/" class="right arrow">&#8594;</a>
+		
+	
+		<span>2</span>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2020-02-22 12:00:16.315366643 &#43;0100 CET m=&#43;0.110015365">2020</time> steffen. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>
