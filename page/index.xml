@@ -6,11 +6,7 @@
     <description>Recent content in Pages on Steffen Fritz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
-    <lastBuildDate>Thu, 02 May 2019 22:35:06 +0100</lastBuildDate>
-    
-	<atom:link href="https://fritz.wtf/page/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 02 May 2019 22:35:06 +0100</lastBuildDate><atom:link href="https://fritz.wtf/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>KNMDI CT</title>
       <link>https://fritz.wtf/page/abk/</link>
@@ -52,8 +48,8 @@ eMail steffen [AT] fritz.wtf
 GnuPG Download PublicKey
 XMPP EOL (Eingestellt 11/2019)
 Datenschutz Erklärung zum Datenschutz für fritz.wtf und amp-off.com
-Von allen Besuchern werden gespeichert und auf unbestimmte Zeit aufbewahrt:
-Datum/Uhrzeit, abgerufene Seiten, Statuscodes des Webservers, Browser/Betriebssystem, der Referer.  Die IP-Adresse, von der aus die Seite abgerufen wurde, wird nicht gespeichert. Somit läßt sich an Hand der Logdaten kaum ein Zusammenhang zu einzelnen Besuchern herstellen.</description>
+Von allen Besuchern werden gespeichert und für 14 Tage aufbewahrt:
+Datum/Uhrzeit, abgerufene Seiten, Statuscodes des Webservers, Browser/Betriebssystem, der Referer, die IP-Adresse  Die Daten erhebe ich auf Grund meines berechtigten Interesses (s. Art. 6 Abs. 1 lit. f. DSGVO) über Zugriffe auf die Website und speichere diese als „Server-Logfiles“ auf dem Server der Website ab.</description>
     </item>
     
   </channel>
