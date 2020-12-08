@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de-de">
     <head>
-	<meta name="generator" content="Hugo 0.71.1" />
+	<meta name="generator" content="Hugo 0.79.0" />
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<meta name="description" content="My personal weblog. &lt;br/&gt;&lt;br/&gt; Ctrl&#43;B toggle sidebar. ">
@@ -32,7 +32,7 @@
         <li>
             <a href="/page/impressum">
                 
-                <span>Impressum</span>
+                <span>Impressum - Datenschutz</span>
                 
             </a>
         </li>
@@ -72,6 +72,20 @@
 
 
 	<div class="catalogue">
+		
+			<a href="https://fritz.wtf/posts/pacaudit/" class="catalogue-item">
+    <div>
+        <time datetime="2017-02-19 13:12:47 &#43;0200 &#43;0200" class="catalogue-time">February 19, 2017</time>
+        <h1 class="catalogue-title">pacaudit - a package audit for Arch Linux</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            I wrote a little, but useful helper. pacaudit checks installed packages against known vulnerabilities listed on https://security.archlinux.org. You should run it after an update because we don&rsquo;t check for packages that are fixed. It would be no problem to check against all known vulnerabilities, just change the source URL in the code (see the github link), yet it makes no sense to me for a rolling release distribution.
+You can install it with
+        </p>
+    </div>
+</a>
+
 		
 			<a href="https://fritz.wtf/posts/siegfried_port/" class="catalogue-item">
     <div>
@@ -128,28 +142,6 @@ Bei Fragen: Fragen. -&gt; steffen AT fritz.wtf
 </a>
 
 		
-			<a href="https://fritz.wtf/posts/usbimg/" class="catalogue-item">
-    <div>
-        <time datetime="2016-06-29 22:18:47 &#43;0200 CEST" class="catalogue-time">June 29, 2016</time>
-        <h1 class="catalogue-title">KNMDI - Computertechnik: Test-Image Sitzung 27.6.2016</h1>
-        <div class="catalogue-line"></div>
-
-        <p>
-              Image des USB-Sticks: https://fritz.wtf/sitzung_1_usb.img.zip
-  Image erstellen unter Linux mit dd:
-dd if=/dev/sdb of=/sitzung_1_usb.img
-  Hashsumme erstellen mit sha1
-sha1 sitzung_1_usb.img &gt; hash.sha1
-  Image mounten
-file -s sitzung_1_usb.img
-parted sitzung_1_usb.img; unit; B; print
-sudo mount -o loop,ro,offset=1048576 sitzung_1_usb.img /mnt/image
-  
-        </p>
-    </div>
-</a>
-
-		
 	</div>
 
 	<div class="pagination">
@@ -167,7 +159,7 @@ sudo mount -o loop,ro,offset=1048576 sitzung_1_usb.img /mnt/image
 
         		<footer>
 			<span>
-			&copy; <time datetime="2020-06-17 09:24:39.863135173 &#43;0200 CEST m=&#43;0.434265586">2020</time> steffen. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			&copy; <time datetime="2020-12-08 11:34:14.288568626 &#43;0100 CET m=&#43;0.355932483">2020</time> steffen. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
 			</span>
 		</footer>
 

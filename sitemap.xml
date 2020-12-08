@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://fritz.wtf/posts/</loc>
-    <lastmod>2020-05-02T13:12:42+02:00</lastmod>
+    <loc>https://fritz.wtf/posts/pacaudit_6/</loc>
+    <lastmod>2020-12-07T22:40:47+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fritz.wtf/posts/saotome/</loc>
-    <lastmod>2020-05-02T13:12:42+02:00</lastmod>
+    <loc>https://fritz.wtf/posts/</loc>
+    <lastmod>2020-12-07T22:40:47+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://fritz.wtf/</loc>
+    <lastmod>2020-12-07T22:40:47+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fritz.wtf/posts/saotome/</loc>
     <lastmod>2020-05-02T13:12:42+02:00</lastmod>
   </url>
   
