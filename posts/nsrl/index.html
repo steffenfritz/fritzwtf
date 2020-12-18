@@ -81,7 +81,7 @@
 
 		<p>A short article I wrote for 2600 - The Hacker Quarterly. It is about the National Software Reference Library and what they and you can do with it.</p>
 <p>2600 is going through tough times right now and I would appreciate it very much if you would buy the magazine, <a href="https://store.2600.com/collections/pdf-downloads">https://store.2600.com/collections/pdf-downloads</a></p>
-<h2 id="the-nsrl-for-hackers">The NSRL For Hackers</h2>
+<h1 id="the-nsrl-for-hackers">The NSRL For Hackers</h1>
 <p>First published in 2600, 37:3</p>
 <p>The National Software Reference Library
 (NSRL) is something you probably never heard
@@ -94,8 +94,8 @@ agencies in the U.S. and the world.
 In this article, I will give you an overview
 over the NSRL and an idea about what you
 can do with it. And what they use it for.</p>
-<p>0x0 What Is It And What’s In It
-Firstly, the NSRL 0 is a huge corpus of
+<h2 id="0x0-what-is-it-and-whats-in-it">0x0 What Is It And What’s In It</h2>
+<p>Firstly, the <a href="https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl">NSRL</a> is a huge corpus of
 software: applications, operating systems,
 games, libraries, and tools. It holds
 proprietary products like Microsoft Windows
@@ -107,14 +107,13 @@ of sexual abuse.
 Secondly, it is a huge collection of
 generated metadata sets from the products
 in the corpus. And these metadata sets are
-available for free and without registration. 1
+available for free and <a href="https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl/nsrl-download/current-rds">without registration</a>.
 The metadata sets are called Reference
 Data Set Hash Sets (RDS hash sets) and there
 are six of them, each different.</p>
-<p>0x1 RDS Types and Structure
-All of these six sets consist of four simple</p>
-<ul>
-<li>but huge - csv text files. In them, you find
+<h2 id="0x1-rds-types-and-structure">0x1 RDS Types and Structure</h2>
+<p>All of these six sets consist of four simple
+- but huge - csv text files. In them, you find
 SHA-1, MD5, and CRC32 hash sums, file
 sizes, names, and more. Let’s have a closer
 look.
@@ -137,8 +136,7 @@ only of entries that have no doublets in the
 first place. I have no clue why someone may
 use this set.
 RDS Legacy has more than 107 million
-entries and includes all the code before 2000.</li>
-</ul>
+entries and includes all the code before 2000.</p>
 <p>Finally, we have two sets for mobiles, one
 each for iOS with more than 14 million and
 Android with 13 million entries.
@@ -146,29 +144,37 @@ What do the entries look like, you ask?
 Here we go. Two examples, with the field
 names in the first line. These entries are from
 the NSRLFile.txt:</p>
-<p>“SHA-1”,”MD5”,”CRC32”,”FileName”,”FileSize”,”ProductCode”,”OpSystemCode”,”SpecialCode”
-“000000F694CA9BF73836D67DEB5E2724338B422D”,”497C460BBA43530494F37DF7DE3A5FF4”,”46B80AC7”,”bpa10x.ko”,12944,17066,”362”,””</p>
-<p>“000001BB80E9C6F9CACB6DA82F4D2E3266B9C4C3”,”3491EE38124BF5382D0828C5209C83B5”,”6CC040F2”,”Batman _Seventies.POR”,90,196184,”362”,””</p>
-<p>“1CD1A58EA7014787FDDB23BE6BF6008EE3AC1BD4”,”0606C4B397212803E71345845703CB26”,”8088D594”,”unwind-ilp32.d”,1001,17399,”362”,””</p>
-<p>The first five fields are self-explanatory.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">“SHA-1”,”MD5”,”CRC32”,”FileName”,”FileSize”,”ProductCode”,”OpSystemCode”,”SpecialCode”
+
+“000000F694CA9BF73836D67DEB5E2724338B422D”,”497C460BBA43530494F37DF7DE3A5FF4”,”46B80AC7”,
+”bpa10x.ko”,12944,17066,”362”,””
+
+“000001BB80E9C6F9CACB6DA82F4D2E3266B9C4C3”,”3491EE38124BF5382D0828C5209C83B5”,”6CC040F2”,
+”Batman \_Seventies.POR”,90,196184,”362”,””
+
+“1CD1A58EA7014787FDDB23BE6BF6008EE3AC1BD4”,”0606C4B397212803E71345845703CB26”,”8088D594”,
+”unwind-ilp32.d”,1001,17399,”362”,””_
+</code></pre></div><p>The first five fields are self-explanatory.
 ProductCode references to an entry in the file
 NSRLProd.txt. This file has more information
 on the products where the files are used. Let’s
 have a look into this file and search for the
 product code 17066:</p>
-<p>“ProductCode”,”ProductName”,”ProductVersion”,”OpSystemCode”,”MfgCode”,”Language”,”ApplicationType”
-17066,”Linux Mint 17.2 Rafaela Cinnamon 32-bit”,”2006”,”51”,”534”,”English”,”Operating System”</p>
-<p>OK, so we know that the file bpa10x.ko is used in the operating system Linux Mint 17.2, 32-bit version.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">“ProductCode”,”ProductName”,”ProductVersion”,”OpSystemCode”,”MfgCode”,”Language”,”ApplicationType”
+17066,”Linux Mint 17.2 Rafaela Cinnamon 32-bit”,”2006”,”51”,”534”,”English”,”Operating System”
+</code></pre></div><p>OK, so we know that the file bpa10x.ko is used in the operating system Linux Mint 17.2, 32-bit version.
 The field OpSystemCode references an operating system in the file NSRLOS.txt:</p>
-<p>“OpSystemCode”,”OpSystemName”,”OpSystemVersion”,”MfgCode”
-“51”,”Linux”,”Generic”,”534”</p>
-<p>As you can see, we have relations between the information in the different metadata files of the set.</p>
-<p>0x2 Usage Stories</p>
-<p>Now it is nineteen eighty-four Knock-knock at your front door
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">“OpSystemCode”,”OpSystemName”,”OpSystemVersion”,”MfgCode”
+“51”,”Linux”,”Generic”,”534”
+</code></pre></div><p>As you can see, we have relations between the information in the different metadata files of the set.</p>
+<h2 id="0x2-usage-stories">0x2 Usage Stories</h2>
+<pre><code>Now it is nineteen eighty-four Knock-knock at your front door
 It’s the suede denim secret police
-They have come for your &hellip; PC and hard
-disks and USB sticks and mobiles and &hellip;</p>
-<p>When some nosy people get their hands on
+They have come for your ... PC and hard
+disks and USB sticks and mobiles and ...
+
+Dead Kennedys in 1979
+</code></pre><p>When some nosy people get their hands on
 your equipment and stored data, they are only
 interested in specific data. Data that is user-
 generated and therefore not in off-the-shelf
@@ -201,10 +207,8 @@ hard disk, you could find yourself in the
 same situation like the law enforcement guys.
 When a disk is damaged, in most cases you
 can create an image with “dd” or something
-else. You then let a file carver like “scalpel”</p>
-</li>
-</ol>
-<p>do its work on the image and carve files. If
+else. You then let a file carver like “scalpel”
+do its work on the image and carve files. If
 the file names or metadata cannot be restored,
 you could compare the hashes of the carved
 files against the NSRL and, if the hash is not
@@ -222,18 +226,16 @@ Redis if it has the hash as a key. If not, I copy
 the file to handle it further.
 You can find a script downloading the RDS
 Modern Minimal and importing it into Redis
-on GitHub. 2</p>
-<p>0x3 Conclusion
-The NSRL is an impressive corpus of
+on <a href="https://github.com/steffenfritz/nslredis">GitHub</a>.</p>
+</li>
+</ol>
+<h2 id="0x3-conclusion">0x3 Conclusion</h2>
+<p>The NSRL is an impressive corpus of
 software. It’s freely available Reference Data
 Sets are an invaluable resource for all the IT
 security specialists, data hoarders, digital
 archivists, and metadata nerds out there.
 Have fun with it and do something good!</p>
-<p>0x4 References</p>
-<p>0 <a href="https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl">https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl</a></p>
-<p>1 <a href="https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl/nsrl-download/current-rds">https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl/nsrl-download/current-rds</a></p>
-<p>2 <a href="https://github.com/steffenfritz/nslredis">https://github.com/steffenfritz/nslredis</a></p>
 
 
 		
@@ -250,7 +252,7 @@ Have fun with it and do something good!</p>
         		<footer>
 			
 			<span>
-			&copy; <time datetime="2020-12-18 16:59:35.087422919 &#43;0100 CET m=&#43;0.524808233">2020</time> steffen. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			&copy; <time datetime="2020-12-18 18:11:32.199702047 &#43;0100 CET m=&#43;0.073886288">2020</time> steffen. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
 			</span>
 		</footer>
 
