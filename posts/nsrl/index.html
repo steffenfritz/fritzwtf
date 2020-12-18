@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de-de">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>The NSRL For Hackers &middot; Steffen Fritz</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Steffen Fritz" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">Steffen Fritz</h2>
+				</a>
+				<ul>
+    
+    
+        <li>
+            <a href="/page/impressum">
+                
+                <span>Impressum - Datenschutz</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/page/abk">
+                
+                <span>KNMDI</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/page/publikationen">
+                
+                <span>Publikationen</span>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="/">
+                
+                <span>Home</span>
+                
+            </a>
+        </li>
+    
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        steffen
+        <br>
+        <span>on&nbsp;</span><time datetime="2020-12-18 17:00:47 &#43;0200 &#43;0200">December 18, 2020</time>
+</div>
+
+		<h1 class="post-title">The NSRL For Hackers</h1>
+<div class="post-line"></div>
+
+		
+
+		<p>A short article I wrote for 2600 - The Hacker Quarterly. It is about the National Software Reference Library and what they and you can do with it.</p>
+<p>2600 is going through tough times right now and I would appreciate it very much if you would buy the magazine, <a href="https://store.2600.com/collections/pdf-downloads">https://store.2600.com/collections/pdf-downloads</a></p>
+<h2 id="the-nsrl-for-hackers">The NSRL For Hackers</h2>
+<p>First published in 2600, 37:3</p>
+<p>The National Software Reference Library
+(NSRL) is something you probably never heard
+of, although it is one of the largest software
+collections in the world. It is maintained
+by the National Institute of Standards and
+Technology (NIST), supported and used by
+Homeland Security, FBI, and other security
+agencies in the U.S. and the world.
+In this article, I will give you an overview
+over the NSRL and an idea about what you
+can do with it. And what they use it for.</p>
+<p>0x0 What Is It And What’s In It
+Firstly, the NSRL 0 is a huge corpus of
+software: applications, operating systems,
+games, libraries, and tools. It holds
+proprietary products like Microsoft Windows
+or Adobe suites, but also open source things
+like Linux distributions or GNU compilers.
+The NSRL does not contain forbidden user
+data like terror propaganda videos or images
+of sexual abuse.
+Secondly, it is a huge collection of
+generated metadata sets from the products
+in the corpus. And these metadata sets are
+available for free and without registration. 1
+The metadata sets are called Reference
+Data Set Hash Sets (RDS hash sets) and there
+are six of them, each different.</p>
+<p>0x1 RDS Types and Structure
+All of these six sets consist of four simple</p>
+<ul>
+<li>but huge - csv text files. In them, you find
+SHA-1, MD5, and CRC32 hash sums, file
+sizes, names, and more. Let’s have a closer
+look.
+The RDS Modern set has information about
+software from 2000 and later and counts over
+104 million entries, with doublets. What is
+a doublet in this context? A wallpaper, for
+example, can be part of two operating system
+releases. The wallpapers are identical, i.e.,
+have the same hash sum. As it is used in two
+places, the entry in the set is there twice and,
+therefore, the information is redundant.
+The RDS Modern Minimal is also about
+software from 2000 and later, but with
+doublets eliminated and has still more than
+26 million entries.
+The RDS Modern Unique is again about
+software from 2000 and later, but consists
+only of entries that have no doublets in the
+first place. I have no clue why someone may
+use this set.
+RDS Legacy has more than 107 million
+entries and includes all the code before 2000.</li>
+</ul>
+<p>Finally, we have two sets for mobiles, one
+each for iOS with more than 14 million and
+Android with 13 million entries.
+What do the entries look like, you ask?
+Here we go. Two examples, with the field
+names in the first line. These entries are from
+the NSRLFile.txt:</p>
+<p>“SHA-1”,”MD5”,”CRC32”,”FileName”,”FileSize”,”ProductCode”,”OpSystemCode”,”SpecialCode”
+“000000F694CA9BF73836D67DEB5E2724338B422D”,”497C460BBA43530494F37DF7DE3A5FF4”,”46B80AC7”,”bpa10x.ko”,12944,17066,”362”,””</p>
+<p>“000001BB80E9C6F9CACB6DA82F4D2E3266B9C4C3”,”3491EE38124BF5382D0828C5209C83B5”,”6CC040F2”,”Batman _Seventies.POR”,90,196184,”362”,””</p>
+<p>“1CD1A58EA7014787FDDB23BE6BF6008EE3AC1BD4”,”0606C4B397212803E71345845703CB26”,”8088D594”,”unwind-ilp32.d”,1001,17399,”362”,””</p>
+<p>The first five fields are self-explanatory.
+ProductCode references to an entry in the file
+NSRLProd.txt. This file has more information
+on the products where the files are used. Let’s
+have a look into this file and search for the
+product code 17066:</p>
+<p>“ProductCode”,”ProductName”,”ProductVersion”,”OpSystemCode”,”MfgCode”,”Language”,”ApplicationType”
+17066,”Linux Mint 17.2 Rafaela Cinnamon 32-bit”,”2006”,”51”,”534”,”English”,”Operating System”</p>
+<p>OK, so we know that the file bpa10x.ko is used in the operating system Linux Mint 17.2, 32-bit version.
+The field OpSystemCode references an operating system in the file NSRLOS.txt:</p>
+<p>“OpSystemCode”,”OpSystemName”,”OpSystemVersion”,”MfgCode”
+“51”,”Linux”,”Generic”,”534”</p>
+<p>As you can see, we have relations between the information in the different metadata files of the set.</p>
+<p>0x2 Usage Stories</p>
+<p>Now it is nineteen eighty-four Knock-knock at your front door
+It’s the suede denim secret police
+They have come for your &hellip; PC and hard
+disks and USB sticks and mobiles and &hellip;</p>
+<p>When some nosy people get their hands on
+your equipment and stored data, they are only
+interested in specific data. Data that is user-
+generated and therefore not in off-the-shelf
+products like operating systems. When those
+people have to check millions of files on your
+disks to find a specific file or information,
+it is handy to check if a file is in the NSRL.
+If it is not, chances are high that the file is
+worth a look. So hiding information in files,
+disguised as drivers in system folders, isn’t
+a good idea anymore. To be honest, it never
+was.</p>
+<p>Since you’ve read this far, you’ll probably
+find all this interesting. But you might wonder
+why the NSRL should be of interest for your
+daily practical ITsec work. Let me give you
+two examples.</p>
+<ol>
+<li>
+<p>Baseline for Intrusion Detection Systems
+You could use the NSRL as a baseline for
+an intrusion detection system. Extract all
+entries relevant for your operating system and
+compare the hashes.</p>
+</li>
+<li>
+<p>File carver
+If you have to restore files from a crashed
+hard disk, you could find yourself in the
+same situation like the law enforcement guys.
+When a disk is damaged, in most cases you
+can create an image with “dd” or something
+else. You then let a file carver like “scalpel”</p>
+</li>
+</ol>
+<p>do its work on the image and carve files. If
+the file names or metadata cannot be restored,
+you could compare the hashes of the carved
+files against the NSRL and, if the hash is not
+in the NSRL, the file is probably interesting.
+For the second example, it is enough to
+know if a hash is in the NSRL at all. As I have
+this use case more than once a year, I created
+a workflow for this task using Redis. Redis
+is a simple NoSQL, key-value in-memory
+database. To work efficiently with the hash
+set, I import all SHA-1 hashes as key with
+the value TRUE into a Redis database. After
+that, I create hashes of all carved files and ask
+Redis if it has the hash as a key. If not, I copy
+the file to handle it further.
+You can find a script downloading the RDS
+Modern Minimal and importing it into Redis
+on GitHub. 2</p>
+<p>0x3 Conclusion
+The NSRL is an impressive corpus of
+software. It’s freely available Reference Data
+Sets are an invaluable resource for all the IT
+security specialists, data hoarders, digital
+archivists, and metadata nerds out there.
+Have fun with it and do something good!</p>
+<p>0x4 References</p>
+<p>0 <a href="https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl">https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl</a></p>
+<p>1 <a href="https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl/nsrl-download/current-rds">https://www.nist.gov/itl/ssd/software-quality-group/national-software-reference-library-nsrl/nsrl-download/current-rds</a></p>
+<p>2 <a href="https://github.com/steffenfritz/nslredis">https://github.com/steffenfritz/nslredis</a></p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/posts/pacaudit_6/" class="left arrow">&#8592;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			
+			<span>
+			&copy; <time datetime="2020-12-18 16:59:35.087422919 &#43;0100 CET m=&#43;0.524808233">2020</time> steffen. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>

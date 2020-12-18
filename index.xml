@@ -6,7 +6,19 @@
     <description>Recent content on Steffen Fritz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
-    <lastBuildDate>Mon, 07 Dec 2020 22:40:47 +0200</lastBuildDate><atom:link href="https://fritz.wtf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Dec 2020 17:00:47 +0200</lastBuildDate><atom:link href="https://fritz.wtf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The NSRL For Hackers</title>
+      <link>https://fritz.wtf/posts/nsrl/</link>
+      <pubDate>Fri, 18 Dec 2020 17:00:47 +0200</pubDate>
+      
+      <guid>https://fritz.wtf/posts/nsrl/</guid>
+      <description>A short article I wrote for 2600 - The Hacker Quarterly. It is about the National Software Reference Library and what they and you can do with it.
+2600 is going through tough times right now and I would appreciate it very much if you would buy the magazine, https://store.2600.com/collections/pdf-downloads
+The NSRL For Hackers First published in 2600, 37:3
+The National Software Reference Library (NSRL) is something you probably never heard of, although it is one of the largest software collections in the world.</description>
+    </item>
+    
     <item>
       <title>pacaudit discontinued</title>
       <link>https://fritz.wtf/posts/pacaudit_6/</link>
